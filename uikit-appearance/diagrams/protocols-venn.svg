@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="uia-venn-title uia-venn-desc">
+      <title id="uia-venn-title">What it is vs where it lives</title>
+      <desc id="uia-venn-desc">Two-set Venn: UIAppearance marks classes that can be styled; UIAppearanceContainer marks classes that can appear in a containment chain; UIView sits in the overlap.</desc>
+      <defs>
+        <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');</style></defs>
+
+      <rect width="100%" height="100%" fill="#f5f5f5"/>
+
+      <!-- Circles: centers (360,260) and (560,260), r=160. Overlap is the point. -->
+      <circle cx="360" cy="260" r="160" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/>
+      <circle cx="560" cy="260" r="160" fill="rgba(79,93,117,0.05)" stroke="#4f5d75" stroke-width="1"/>
+
+      <!-- Focal overlap wash (approximate lens via second pass is hard; use a clipped ellipse-ish note).
+           Clip the accent tint to the intersection. -->
+      <clipPath id="left-circ">
+        <circle cx="360" cy="260" r="160"/>
+      </clipPath>
+      <circle cx="560" cy="260" r="160" fill="rgba(235,108,54,0.10)" clip-path="url(#left-circ)"/>
+
+      <!-- Set labels outside strokes -->
+      <text x="248" y="88" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">UIAppearance</text>
+      <text x="248" y="104" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">can be styled</text>
+
+      <text x="672" y="88" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Container</text>
+      <text x="672" y="104" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">can be a place</text>
+
+      <!-- Region labels -->
+      <text x="280" y="252" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">UIBarItem</text>
+      <text x="280" y="268" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">styled, not a node</text>
+
+      <text x="460" y="248" fill="#eb6c36" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">UIView</text>
+      <text x="460" y="264" fill="#eb6c36" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">both roles</text>
+
+      <text x="640" y="252" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">UIViewController</text>
+      <text x="640" y="268" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">place, not styled</text>
+
+      <!-- Legend -->
+      <line x1="40" y1="500" x2="920" y2="500" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+      <text x="40" y="524" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.14em">LEGEND</text>
+
+      <circle cx="128" cy="520" r="8" fill="rgba(45,49,66,0.04)" stroke="#2d3142" stroke-width="1"/>
+      <text x="144" y="524" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace">Appearance</text>
+
+      <circle cx="272" cy="520" r="8" fill="rgba(79,93,117,0.05)" stroke="#4f5d75" stroke-width="1"/>
+      <text x="288" y="524" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace">Container</text>
+
+      <circle cx="416" cy="520" r="8" fill="rgba(235,108,54,0.10)" stroke="#eb6c36" stroke-width="1"/>
+      <text x="432" y="524" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace">Overlap</text>
+    </svg>
